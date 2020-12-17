@@ -11,17 +11,17 @@ Create the following folder architecture
 
 2) Create "amont" folder, which should contain:
 - 161010_Chinese_Spring_v1.0_pseudomolecules_AGP.tsv (scaffold boundaries on RefSeq v1.0, reference: helene.rimbert@inrae.fr)
+- csre_genotyping.txt (CsRe genotyping matrix, reference: pierre.sourdille@inrae.fr)
+- BW_261K_wp3.ped and BW_261K_wp3.map (genotyping data of landraces, reference: sophie.bouchet@inrae.fr)
 - accessions_4403_alice.csv (passeport data on landraces, reference: sophie.bouchet@inrae.fr)
-- CartPolyHigh-Oriented_def_def_def.txt (markers and info on CsRe genotyping matrix, reference: pierre.sourdille@inrae.fr)
+- landrace632_8741hap.dis (pairwise simple matching distance matrix of landraces, reference: sophie.bouchet@inrae.fr)
+- landrace632_8741hap_sophie.var (haplotypes matrix of landraces, reference: sophie.bouchet@inrae.fr)
+- stat_haplo8741.txt (frontiers of haplotypic blocks, reference: sophie.bouchet@inrae.fr)
 - Codes_chr.txt (ID of chromosomes in letters or numbers, reference: sophie.bouchet@inrae.fr)
 - Decoupage_chr_ble.tab (frontiers of genomic regions, reference: sophie.bouchet@inrae.fr)
+- SNP_positions.txt (positions of SNP on RefSeq v1.0, reference: sophie.bouchet@inrae.fr)
 - domestication.csv (frontiers of domestication and agronomic genes, derived from Pont & al. 2019)
 - iwgsc_refseqv1.0_HighConf_UTR_2017May05.gff3 (frontiers of genes, 5' and 3' UTR ... from URGI wbesite)
-- landrace632_8741hap.dis (pairwise simple matching distance matrix of landraces, reference: sophie.bouchet@inrae.fr)
-- MatriceGenoHead.CorrectedName.UniqSorted.tab (raw CsRe genotyping matrix, reference: pierre.sourdille@inrae.fr)
-- stat_haplo8741.txt (frontiers of haplotypic blocks, reference: sophie.bouchet@inrae.fr)
-- Vraies_positions_marqueurs.txt (positions of SNP on RefSeq v1.0, reference: sophie.bouchet@inrae.fr)
-- BW.... (genotyping data of landraces, reference: sophie.bouchet@inrae.fr)
 
 You can find all these raw files on ....
 
@@ -48,4 +48,5 @@ Required installed softwares are:
 - ASREML (R library)
 - PLINK
 - PHASE (path is /save/servin/bin/PHASE in PHASE_2.sh)
+- HAPFLK (path is /save/servin/Envs/hapflkdev/bin/activate in FST.sh)
 - bedtools-2.27.1 and bedops-v2.4.35 to use bedr library in HR_permutation.sh
