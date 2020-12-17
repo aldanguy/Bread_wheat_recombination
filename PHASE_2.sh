@@ -136,7 +136,7 @@ rm ${out}_PHASE_raw_outputs_temp.txt
 
 
 
-Rscript ${r_scripts}PHASE_2.R ${monitor} ${window} ${r_sources}scaffolds.txt ${out}_PHASE_raw_outputs.txt ${r_sources}SNP_positions.txt ${out}_PHASE_raw_outputs.txt ${r_intervals_mqs}${ID}_mqs.txt ${r_PHASE_output_summary}${ID}_PHASE_summary_outputs.txt ${r_graphs_PHASE}${ID}.png
+Rscript ${r_scripts}PHASE_2.R ${monitor} ${window} ${r_scaffolds}scaffolds.txt ${out}_PHASE_raw_outputs.txt ${r_amont}SNP_positions.txt ${out}_PHASE_raw_outputs.txt ${r_intervals_mqs}${ID}_mqs.txt ${r_PHASE_output_summary}${ID}_PHASE_summary_outputs.txt ${r_graphs_PHASE}${ID}.png
 
 
 # Info sur la fenetre

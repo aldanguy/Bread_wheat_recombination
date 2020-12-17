@@ -61,7 +61,7 @@ done
 
 
 
-Rscript ${r_scripts}mb_csre.R ${r_csre}csre_crossovers_positions.txt ${r_sources}csre_genetic_map.txt ${chr_tab} ${nb_posterior} ${map} ${r_csre}${titre}_csre.txt
+Rscript ${r_scripts}mb_csre.R ${r_csre}csre_crossovers_positions.txt ${r_csre}csre_genetic_map.txt ${chr_tab} ${nb_posterior} ${map} ${r_csre}${titre}_csre.txt
 
 
 sed -i '/^$/d' ${r_log_jobs}map_${size}mb_2_jobs.txt

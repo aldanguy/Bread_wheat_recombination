@@ -14,7 +14,7 @@ repertoire=${2}
 titre_resume=${r_PHASE}PHASE_summary_outputs.txt
 titre_PHASE_summary_outputs2=${r_published}PHASE_summary_outputs_published.txt
 
-titre_csre_genetic_map=${r_sources}csre_genetic_map.txt
+titre_csre_genetic_map=${r_csre}csre_genetic_map.txt
 titre_landraces_genetic_map=${r_maps_pop}landraces_genetic_maps.txt
 titre_genetic_maps=${r_published}genetic_maps_published.txt
 
@@ -34,20 +34,18 @@ titre_maps_4Mb=${r_published}historical_and_meiotic_maps_4Mb_published.txt
 
 
 
-titre_csre_genotyping=${r_sources}csre_genotyping.txt
-titre_csre_genotyping2=${r_published}csre_genotyping_matrix_published.txt
 
 
 titre_FST_SNP=${r_FST}chrregion_FST_SNP.txt
 titre_FST_haplotypic_blocs=${r_FST}chrregion_FST_haplotypic_blocks.txt
 titre_FST=${r_published}FST_published.txt
 
-titre_SNP_positions=${r_sources}SNP_positions.txt
+titre_SNP_positions=${r_amont}SNP_positions.txt
 titre_chr_regions=${r_amont}Decoupage_chr_ble.tab
 titre_correspondance_chr=${r_amont}Codes_chr.txt
 titre_stab1=${r_published}supplementary_tab1.txt
 
-titre_landraces=${r_sources}landraces.txt
+titre_landraces=${r_landraces}landraces.txt
 titre_stab2=${r_published}supplementary_tab2.txt
 
 
@@ -76,25 +74,21 @@ v15=${titre_cor_4Mb}
 v16=${titre_maps_4Mb}
 
 
-v17=${titre_csre_genotyping}
-v18=${titre_csre_genotyping2}
+v17=${titre_FST_SNP}
+v18=${titre_FST_haplotypic_blocs}
+v19=${titre_FST}
 
+v20=${titre_SNP_positions}
+v21=${titre_chr_regions}
+v22=${titre_correspondance_chr}
+v23=${titre_stab1}
 
-v19=${titre_FST_SNP}
-v20=${titre_FST_haplotypic_blocs}
-v21=${titre_FST}
-
-v22=${titre_SNP_positions}
-v23=${titre_chr_regions}
-v24=${titre_correspondance_chr}
-v25=${titre_stab1}
-
-v26=${titre_landraces}
-v27=${titre_stab2}
+v24=${titre_landraces}
+v25=${titre_stab2}
 
 
 
-Rscript ${r_scripts}tabs_output.R ${v0} ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14} ${v15} ${v16} ${v17} ${v18} ${v19} ${v20} ${v21} ${v22} ${v23} ${v24} ${v25} ${v26} ${v27}
+Rscript ${r_scripts}tabs_output.R ${v0} ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14} ${v15} ${v16} ${v17} ${v18} ${v19} ${v20} ${v21} ${v22} ${v23} ${v24} ${v25}
 
 
 cp ${r_FST}pairwise_FST_matrix_haplotypic_blocks.txt ${r_published}pairwise_FST_matrix_haplotypic_blocks.txt
@@ -114,6 +108,7 @@ titre_f3=${r_graphs}Figure3.tiff
 titre_f4=${r_graphs}Figure4.tiff
 titre_f6=${r_graphs}Figure6.tiff
 titre_graph_significativity_boxplots_pairs_of_populations=${r_graphs}significativity_boxplots_pairs_of_populations.tiff
+titre_slopes_SNP_specific_or_common=${r_graphs}slopes_SNP_specific_or_common.tiff
 
 v1=${repertoire}
 v2=${titre_correlations_4mb_published}
@@ -129,6 +124,7 @@ v11=${titre_f3}
 v12=${titre_f4}
 v13=${titre_f6}
 v14=${titre_graph_significativity_boxplots_pairs_of_populations}
+v15=${titre_slopes_SNP_specific_or_common}
 
 
-Rscript ${r_scripts}graphs_output.R ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14}
+Rscript ${r_scripts}graphs_output.R ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14} ${v15}

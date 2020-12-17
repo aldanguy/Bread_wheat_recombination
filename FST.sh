@@ -23,7 +23,7 @@ module load system/R-3.4.3_bis
 
 
 
-Rscript ${r_scripts}FST_blocks.R ${chr_tab} ${chr_names} ${haplotypic_blocks} ${haplotypic_blocks_limits} ${r_sources}landraces.txt ${r_FST}chrregion_FST_haplotypic_blocks.txt ${r_FST}pairwise_FST_matrix_haplotypic_blocks.txt
+Rscript ${r_scripts}FST_blocks.R ${chr_tab} ${chr_names} ${haplotypic_blocks} ${haplotypic_blocks_limits} ${r_landraces}landraces.txt ${r_FST}chrregion_FST_haplotypic_blocks.txt ${r_FST}pairwise_FST_matrix_haplotypic_blocks.txt
 
 
 
@@ -34,7 +34,7 @@ source ${base}
 
 source /save/servin/Envs/hapflkdev/bin/activate
 
-hapflk --bfile ${r_sources}landraces_final >>${r_log}FST.out
+hapflk --bfile ${r_landraces}landraces_final >>${r_log}FST.out
 
 deactivate
 
@@ -50,7 +50,7 @@ chrregion=$(echo ${f} | sed "s|${r_PLINK}||g" | sed "s|.txt||g" | sed "s|chrregi
 echo ${chrregion}
 
 
-plink --file ${r_sources}landraces_final --recode --noweb --extract ${f} --out ${r_FST}landraces_${chrregion} >>${r_log}FST.out
+plink --file ${r_landraces}landraces_final --recode --noweb --extract ${f} --out ${r_FST}landraces_${chrregion} >>${r_log}FST.out
 
 plink --file ${r_FST}landraces_${chrregion} --noweb --make-bed --out ${r_FST}landraces_${chrregion} >>${r_log}FST.out
 

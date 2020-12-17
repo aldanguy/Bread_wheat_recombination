@@ -14,7 +14,7 @@ job_out=${r_log}annotations_genes.out
     
 job_name=genes
 	    
-# job_genes=$(sbatch -o ${job_out} -J ${job_name} --mem=50G --parsable ${r_scripts}annotations_genes.sh ${base}) 
+job_genes=$(sbatch -o ${job_out} -J ${job_name} --mem=50G --parsable ${r_scripts}annotations_genes.sh ${base}) 
     
     
 

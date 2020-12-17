@@ -1,5 +1,4 @@
 
-# module purge
 
 Sys.time()
 rm(list = ls())
@@ -15,7 +14,7 @@ suppressPackageStartupMessages(library(data.table))
 
 
 
-cat("\n annotation.R\n")
+cat("\n annotations_genes.R\n")
 cat("\n\nVariables : \n")
 print(variables)
 cat("\n\n")

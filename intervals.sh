@@ -18,7 +18,7 @@ done
 cat ${r_intervals_mqs}*_mqs.txt | sort | uniq > ${r_intervals}mqs.txt
 
 
-Rscript ${r_scripts}intervals.R ${r_intervals}mqs.txt ${r_sources}SNP_positions.txt ${r_intervals}intervals.txt
+Rscript ${r_scripts}intervals.R ${r_intervals}mqs.txt ${r_amont}SNP_positions.txt ${r_intervals}intervals.txt
 
 
 

@@ -36,12 +36,13 @@ job_name=landraces
 job_out=${r_log}SNP_positions.out
 job_name=SNP_positions
 # job3=$(sbatch -o ${job_out} -J ${job_name} --time=00:30:00 --parsable ${r_scripts}SNP_positions.sh ${base})
-
+# This script is skipped in public pipeline because of management of not public data. Not necessary to run further scripts.
 
 ## CsRe genotyping, crossovers counting and empirical genetic map 
 job_out=${r_log_csre}csre.out
 job_name=csre
-# job4=$(sbatch -o ${job_out} -J ${job_name} --time=48:00:00 --mem=50G --dependency=afterok:${job3} --parsable ${r_scripts}csre.sh ${base})
+# job4=$(sbatch -o ${job_out} -J ${job_name} --time=48:00:00 --mem=50G --parsable ${r_scripts}csre.sh ${base})
+# Within this bash script, one R script is skipped in public pipeline because of management of not public data. This skipped script is not necessary to run further scripts.
 
 
 ################################# Etape 3 : CsRe Bayesian recombination profile

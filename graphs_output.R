@@ -41,7 +41,7 @@ titre_f3 <- variables[11]
 titre_f4 <- variables[12]
 titre_f6 <- variables[13]
 titre_graph_significativity_boxplot_pairs_of_populations <- variables[14]
-
+titre_slopes_SNP_specific_or_common<- variables[15]
 
 # titre_correlations_4mb_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
 # titre_FST_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/FST_published.txt"
@@ -55,9 +55,10 @@ titre_graph_significativity_boxplot_pairs_of_populations <- variables[14]
 # titre_f2 <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure2.tiff"
 # titre_f4 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure4.tiff"
 # titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure6.tiff"
-# 
-# 
+# titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes_SNP_common/Figure6.tiff"
+# titre_slopes_SNP_specific_or_common="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/slopes_SNP_specific_or_common.tiff"
 
+# 
 
 
 # titre_resume <- paste0(dossier,"PHASE_summary_outputs.txt")
@@ -980,6 +981,8 @@ slopes_lambda_haplotypic_blocks=data.frame(intervals(mod_lambda_haplotypic_block
 
 
 
+
+
 f6a <- fread(titre_correlations_mixed_models_published) %>%
   inner_join(fread(titre_FST_published), by=c("chr"="chr","region"="region", "P1"="P1","P2"="P2")) %>%
   filter(method=="haplotypic_blocks") %>%
@@ -1049,6 +1052,97 @@ f6
 dev.off()
 
 
+
+# comparison with common SNP
+
+
+
+
+mod_lambda_haplotypic_blocks_common_SNP = lmList( cor_lambda ~ FST | chrregion, data=fread(titre_correlations_mixed_models_published_common_SNP) %>%
+                                         inner_join(fread(titre_FST_published), by=c("chr"="chr","region"="region","P1"="P1","P2"="P2")) %>%
+                                         filter(method=="haplotypic_blocks") %>% mutate(chrregion=paste0(chr,region)) %>%
+                                         na.omit() %>%
+                                         filter(region !="C"))
+
+slopes_SNP_specific_or_commona <-data.frame(intervals(mod_lambda_haplotypic_blocks_common_SNP)[,,2]) %>%
+  rename(slope=est.) %>%
+  rownames_to_column(var="chrregion") %>%
+  mutate(chr=substr(chrregion,1,2)) %>%
+  mutate(region=substr(chrregion,3,5)) %>%
+  mutate( confidence_interval = case_when(upper<0~"<0",
+                                          lower>0~">0",
+                                          upper>0 & lower<0 ~ "include 0")) %>%
+  mutate(confidence_interval=factor(confidence_interval, levels=c("<0","include 0",">0"))) %>%
+  mutate(method="common") %>%
+  inner_join(slopes_lambda_haplotypic_blocks %>%
+               mutate(method="specific"), by=c("chr"="chr", "region"="region", "chrregion"="chrregion"), suffix=c(".common",".specific")) %>%
+  mutate(overlapp_of_conf_interval=ifelse(!(upper.specific <= lower.common | lower.specific >= upper.common), T, F)) %>%
+  ggplot(aes(x=slope.specific, y=slope.common)) +
+  geom_point() +
+  geom_smooth(method = "lm", col="red") +
+  geom_abline(slope=1, intercept = 0) +
+  theme_light() +
+  xlab("Fst effect computed using specific SNP dataset") +
+  ylab("Fst effect computed using common SNP dataset")+
+  geom_hline(yintercept = 0, col=slopes_signif[2], size=2) +
+  geom_vline(xintercept=0, col=slopes_signif[2], size=2) +
+  theme(legend.position = "bottom",
+        axis.title.y = element_text(size=14, colour="#C77CFF"),
+        axis.title.x = element_text( size=14,colour="#F1A340"),
+        axis.text.y = element_text( size=14,colour="#C77CFF"),
+        axis.text.x = element_text( size=14,colour="#F1A340")) +
+  scale_x_continuous(limits = c(-10,2.5))+
+  scale_y_continuous(limits = c(-10,2.5))
+
+
+
+
+slopes_SNP_specific_or_commonb <- data.frame(intervals(mod_lambda_haplotypic_blocks_common_SNP)[,,2]) %>%
+  rename(slope=est.) %>%
+  rownames_to_column(var="chrregion") %>%
+  mutate(chr=substr(chrregion,1,2)) %>%
+  mutate(region=substr(chrregion,3,5)) %>%
+  mutate( confidence_interval = case_when(upper<0~"<0",
+                                          lower>0~">0",
+                                          upper>0 & lower<0 ~ "include 0")) %>%
+  mutate(confidence_interval=factor(confidence_interval, levels=c("<0","include 0",">0"))) %>%
+  mutate(method="common") %>%
+  rbind(., slopes_lambda_haplotypic_blocks %>%
+  mutate(method="specific")) %>%
+  mutate(chrregion=factor(chrregion, levels=slopes_lambda_haplotypic_blocks %>% arrange(slope) %>%
+                     dplyr::select(chrregion) %>%
+                     unlist() %>%
+                     as.vector())) %>%
+      ggplot(aes(y = slope, ymin = lower,
+                 x = chrregion, ymax = upper, group = chrregion, col=method)) +
+      geom_point(position = position_dodge(1), size=4) +
+      geom_linerange(position = position_dodge(1)) +
+  geom_abline(slope=0, intercept = 0, col=slopes_signif[2], size=2) +
+      coord_flip()   +
+      ylab(label='Fst effect') +
+  xlab( label = "genomic region") +
+      scale_colour_manual(values=c("#C77CFF","#F1A340"))+
+  guides(colour=guide_legend("slope estimate: "))+
+  theme_light() +
+  theme(axis.title.y = element_text(size=14),
+        axis.title.x = element_text(size=14),
+        axis.text.y = element_text(size=6),
+        legend.text=element_text(size=14),
+        legend.title=element_text(size=14),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") 
+
+
+
+slopes_SNP_specific_or_common <- ggdraw() +
+  draw_plot(slopes_SNP_specific_or_commonb, x=0.02, y=0.5, height = 0.5, width = 0.95) +
+  draw_plot(slopes_SNP_specific_or_commona, x=0.25, y=0., height = 0.5, width = 0.5) +
+  draw_plot_label(c("A", "B"), c(0,0), c(1,0.5), size = 20)
+
+
+tiff(titre_slopes_SNP_specific_or_common, units="in", width = 12, height = 12, res=200, compression = "lzw")
+slopes_SNP_specific_or_common
+dev.off()
 
 
 

@@ -5,19 +5,17 @@
 
 # General
 
-date=020820
+base=${r_scripts}base_020820.sh
 
-r_amont=/work/adanguy/these/pipeline/amont/
 
-r_scripts=/work/adanguy/these/pipeline/scripts/
+source ${base}
 
 r=/work/adanguy/these/pipeline/${date}/common_SNP/
 
-base=${r_scripts}base_020820.sh
 
 base_common_SNP=${r_scripts}base_${date}_common_SNP.sh
 
-base_SNP_specific_vs_common=${r_scripts}base_${date}_SNP_specific_vs_common.sh
+#base_SNP_specific_vs_common=${r_scripts}base_${date}_SNP_specific_vs_common.sh
 
 mkdir -p ${r}
 
@@ -150,6 +148,14 @@ r_published=${r}tabs/
 mkdir -p ${r_published}
 
 
+r_scaffolds=${r}scaffolds/
+mkdir -p ${r_scaffolds}
+
+r_landraces=${r}landraces/
+mkdir -p ${r_landraces}
+
+r_annotation=${r}annotation/
+mkdir -p ${r_annotation}
 
 
 ##### Fichiers amont
@@ -167,17 +173,9 @@ K8=${r_amont}landrace8741hap_k8_rep2_f_f-ord-ord-ord
 
 dis=${r_amont}landrace632_8741hap.dis
 
-pos=${r_amont}Vraies_positions_marqueurs.txt
-
-SNP_category=${r_amont}Axiom_TaBW420_OrigineSNPs.csv
-
 chr_names=${r_amont}Codes_chr.txt
 
 chr_tab=${r_amont}Decoupage_chr_ble.tab
-
-csre_others_SNP=${r_amont}CartPolyHigh-Oriented_def_def_def.txt
-
-raw_csre_genotyping=${r_amont}MatriceGenoHead.CorrectedName.UniqSorted.tab
 
 PLINK_initial=${r_amont}BW_261K_wp3
 
@@ -185,6 +183,11 @@ haplotypic_blocks=${r_amont}landrace632_8741hap_sophie.var
 
 haplotypic_blocks_limits=${r_amont}stat_haplo8741.txt
 
+SNP_positions=${r_amont}SNP_positions.txt
+
+amont_annotation=${r_amont}iwgsc_refseqv1.0_HighConf_UTR_2017May05.gff3
+
+csre_genotyping=${r_amont}csre_genotyping.txt
 
 
 ## Variables

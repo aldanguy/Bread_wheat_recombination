@@ -39,17 +39,17 @@ titre_csre_4Mb <- variables[15]
 titre_cor_4Mb <- variables[16]
 titre_maps_4Mb <- variables[17]
 
-titre_csre_genotyping <- variables[18]
-titre_csre_genotyping_matrix <- variables[19]
-titre_FST_SNP <- variables[20]
-titre_FST_haplotypic_blocs <- variables[21]
-titre_FST <- variables[22]
-titre_SNP_positions <- variables[23]
-titre_chr_regions <- variables[24]
-titre_correspondance_chr <- variables[25]
-titre_stab1 <- variables[26]
-titre_landraces <- variables[27]
-titre_stab2 <- variables[28]
+# titre_csre_genotyping <- variables[18]
+# titre_csre_genotyping_matrix <- variables[19]
+titre_FST_SNP <- variables[18]
+titre_FST_haplotypic_blocs <- variables[19]
+titre_FST <- variables[20]
+titre_SNP_positions <- variables[21]
+titre_chr_regions <- variables[22]
+titre_correspondance_chr <- variables[23]
+titre_stab1 <- variables[24]
+titre_landraces <- variables[25]
+titre_stab2 <- variables[26]
 
 # titre_resume <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
 # titre_csre_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genetic_map.txt"
@@ -62,8 +62,10 @@ titre_stab2 <- variables[28]
 # titre_hr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/HR.txt"
 # titre_cliques <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/cliques_HR.txt"
 # titre_lambda <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_lambda_random.txt"
+# titre_lambda2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_lambda_random.txt"
 # titre_rho <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_rho_random.txt"
-# titre_correlations_mixed_models
+# titre_rho2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_rho_random.txt"
+# titre_correlations_mixed_models2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/correlations_mixed_models_published.txt"
 # titre_landraces_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_landraces.txt"
 # titre_csre_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_csre.txt"
 # titre_cor_4Mb<- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
@@ -200,7 +202,6 @@ if (repertoire=="all"){
   
   head(fread(titre_FST_SNP))
   head(fread(titre_landraces))
-  fread(titre_csre_genotyping)[1:10,1:10]
   head(fread(titre_SNP_positions))
   head(read.table(titre_correspondance_chr, header=F, dec=".", sep="\t"))
   head(read.table(titre_chr_regions, header=T, dec=".", sep="\t", skip=1))
@@ -240,11 +241,11 @@ if (repertoire=="all"){
   
   
   
-  # csre genotyping
-  geno <- fread(titre_csre_genotyping) %>%
-    dplyr::select(-population, -region) %>%
-    rename(pos=posSNP) %>%
-    arrange(chr, pos)
+  # # csre genotyping
+  # geno <- fread(titre_csre_genotyping) %>%
+  #   dplyr::select(-population, -region) %>%
+  #   rename(pos=posSNP) %>%
+  #   arrange(chr, pos)
   
   
   ### genomic regions
@@ -300,8 +301,8 @@ if (repertoire=="all"){
   
   head(genomic_regions)
   write.table(genomic_regions, titre_stab1, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-  geno[1:10,1:10]
-  write.table(geno, titre_csre_genotyping_matrix, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
+  # geno[1:10,1:10]
+  # write.table(geno, titre_csre_genotyping_matrix, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
   head(FST)
   write.table(FST, titre_FST, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
   head(landraces)
