@@ -70,6 +70,7 @@ job_out=${r_log}modele.out
 job_name=HR_1
 job_out=${r_log}HR.out
 # job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job15} --parsable ${r_scripts}HR_1.sh ${base_common_SNP})
+job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --parsable ${r_scripts}HR_1.sh ${base_common_SNP})
 
 
 
@@ -86,7 +87,6 @@ job_name=mb
 size=4
 job_out=${r_log}${size}mb.out
 # job104=$(sbatch -o ${job_out} -J ${job_name} --mem=50G --dependency=afterok:${job15} --parsable ${r_scripts}mb_1.sh ${base_common_SNP} ${size}) 
-job104=$(sbatch -o ${job_out} -J ${job_name} --mem=50G --parsable ${r_scripts}mb_1.sh ${base_common_SNP} ${size}) 
 
 
 ## Extraction of meiotic recombination maps from historical maps
@@ -100,5 +100,5 @@ job_out=${r_log}population_specific_meiotic_rec_rates.out
 job_name=published
 job_out=${r_log}published.out
 # job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job104}:${job16}:${job102}:${job101}:${job107} --parsable ${r_scripts}graphs_output.sh ${base_common_SNP} common_SNP)
-job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=10G --dependency=afterok:${job104} --parsable ${r_scripts}graphs_output.sh ${base_common_SNP} common_SNP)
+job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=10G --dependency=afterok:${job16} --parsable ${r_scripts}graphs_output.sh ${base_common_SNP} common_SNP)
 

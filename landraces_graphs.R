@@ -51,15 +51,15 @@ titre_matrice_FST_png<-variables[7]
 titre_hclust_png <- variables[8]
 titre_tabs2 <- variables[9]
 
-
-    titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
-    titre_tree <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/hapflk_tree_genome.txt"
-    titre_matrice <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/pairwise_FST_matrix_haplotypic_blocks.txt"
-    titre_graphe2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure1.tiff"
-    titre_matrice_FST_png <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/landraces_FST_matrix_haplotypes.png"
-    titre_hclust_png <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/hclust4_png.png"
-    titre_graphe1 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/landraces.png"
-   titre_dissimilarities <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/landrace632_8741hap.dis"
+# 
+#     titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
+#     titre_tree <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/hapflk_tree_genome.txt"
+#     titre_matrice <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/pairwise_FST_matrix_haplotypic_blocks.txt"
+#     titre_graphe2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure1.tiff"
+#     titre_matrice_FST_png <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/landraces_FST_matrix_haplotypes.png"
+#     titre_hclust_png <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/hclust4_png.png"
+#     titre_graphe1 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/landraces.png"
+#    titre_dissimilarities <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/landrace632_8741hap.dis"
    
 
 
@@ -444,8 +444,8 @@ WAg4 <- WA4 %>%
   ggplot(aes(x=pos, y=value, fill=memb, col=memb) ) + 
   geom_bar(stat="identity", position="fill") +
   theme_void ()+
-  scale_colour_manual("K=4", values=color4) +
-  scale_fill_manual("K=4",  values=color4) +
+  scale_colour_manual("K=4", values=color4) + #
+  scale_fill_manual("K=4",  values=color4) + #
   theme(legend.text = element_text(size = 5)) +
   theme(legend.key.size = unit(0.5,"line")) +
   theme(text=element_text(family="serif", face="bold")) +

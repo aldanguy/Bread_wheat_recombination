@@ -42,7 +42,9 @@ cp ${r_graphs}coloc_HR_distances.png ${r_graphs}coloc_HR_distances_borders.png
 
 cp ${r_graphs}relative_lambda_HR_populations_3.png ${r_graphs}relative_lambda_HR_populations_3_borders.png 
 
-cp ${r_graphs}Figure6.tiff ${r_graphs}Figure6_borders.tiff
+cp ${r_graphs}Figure5.tiff ${r_graphs}Figure5_borders.tiff
+
+cp ${r_HR}relativ_lambda_HR_populations.txt ${r_HR}relativ_lambda_HR_populations_borders.txt
 
 
 ## Without marges

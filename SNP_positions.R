@@ -37,6 +37,16 @@ titre_sortie <- variables[7]
      # titre_BW <- "/home/adanguydesd/Documents/These_Alice/pipeline/poubelle/landraces.map"
      # titre_sortie <- "/home/adanguydesd/Documents/These_Alice/pipeline/poubelle/SNP_positions.txt"
 
+
+
+
+titre_SNP_category <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Axiom_TaBW420_OrigineSNPs.csv"
+titre_pos <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Vraies_positions_marqueurs.txt"
+titre_correspondance_chr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Codes_chr.txt"
+titre_autres_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/CartPolyHigh-Oriented_def_def_def.txt"
+titre_BW <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/donnees_publiees/BW_261K_wp3.map"
+titre_chr_tab <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Decoupage_chr_ble.tab"
+
  # titre_pos <-"/work/adanguy/these/pipeline/amont/Vraies_positions_marqueurs.txt"       
  # titre_SNP_category <-"/work/adanguy/these/pipeline/amont/Axiom_TaBW420_OrigineSNPs.csv"        
  # titre_correspondance_chr <- "/work/adanguy/these/pipeline/amont/Codes_chr.txt"                        
@@ -105,6 +115,18 @@ pos1 <- rbind(pos, autres_SNP) %>%
   
 
 head(pos1)
+
+# which(!pos1$SNP %in% mqs_publiques$SNP)
+# 
+# which(!fread(titre_autres_SNP, header=T, dec=".", sep="\t", data.table = F) %>%
+#   filter(!is.na(BW_published)) %>%
+#   dplyr::select(BW_published) %>%
+#   unlist() %>%
+#   as.vector() %in% mqs_publiques$SNP)
+# 
+# 
+# length(grep("OTV",BW[which(!BW %in% mqs_publiques$SNP)]))
+# length(BW[which(!BW %in% mqs_publiques$SNP)])
 
 
 

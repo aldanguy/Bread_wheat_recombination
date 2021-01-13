@@ -7,7 +7,6 @@ source ${base}
 
 borders=${2}
 
-<<COMMENTS
 
 Rscript ${r_scripts}HR_detection.R ${r_PHASE}PHASE_summary_outputs.txt ${chr_names} ${r_HR}HR.txt ${r_graphs}distribution_lambda.png ${r_graphs}ratio_HR_size.png ${r_graphs}relationship_lambda_size.png ${r_graphs}physical_size_HR.png
  
@@ -38,7 +37,7 @@ do
     job_out=${r_log_HR}permutation_${n}.out
     job_name=${n}_p
 	    
-    # job_perm=$(sbatch -o ${job_out} -J ${job_name} --mem=40G --parsable ${r_scripts}HR_permutation.sh ${base} ${borders} ${n} )
+    job_perm=$(sbatch -o ${job_out} -J ${job_name} --mem=40G --parsable ${r_scripts}HR_permutation.sh ${base} ${borders} ${n} )
     
     
     echo "${job_perm}" >> ${r_log_jobs}permutation_jobs.txt

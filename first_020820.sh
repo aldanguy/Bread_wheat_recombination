@@ -146,6 +146,7 @@ job102=$(sbatch -o ${job_out} -J ${job_name} -p workq --time=00:10:00 --parsable
 job_name=HR_1
 job_out=${r_log}HR.out
 # job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job15} --parsable ${r_scripts}HR_1.sh ${base})
+job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --parsable ${r_scripts}HR_1.sh ${base})
 
 
 ## Position of gene features and HR
@@ -188,7 +189,8 @@ job_out=${r_log}population_specific_meiotic_rec_rates.out
 ## Extraction of meiotic recombination maps from historical maps
 job_name=published
 job_out=${r_log}published.out
-# job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job104}:${job16}:${job102}:${job101}:${job107} --parsable ${r_scripts}graphs_output.sh ${base} all)
+# job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job104}:${job102}:${job16}:${job102}:${job101}:${job107} --parsable ${r_scripts}graphs_output.sh ${base} all)
+job108=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --parsable ${r_scripts}published.sh ${base} all)
 
 
 ## comparison of recombination rates with different SNP dataset

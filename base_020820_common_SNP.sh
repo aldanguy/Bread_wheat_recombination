@@ -5,7 +5,9 @@
 
 # General
 
-base=${r_scripts}base_020820.sh
+
+
+base=/work/adanguy/these/pipeline/scripts/base_020820.sh
 
 
 source ${base}
@@ -15,7 +17,12 @@ r=/work/adanguy/these/pipeline/${date}/common_SNP/
 
 base_common_SNP=${r_scripts}base_${date}_common_SNP.sh
 
+
+base=${base_common_SNP}
+
 #base_SNP_specific_vs_common=${r_scripts}base_${date}_SNP_specific_vs_common.sh
+
+
 
 mkdir -p ${r}
 

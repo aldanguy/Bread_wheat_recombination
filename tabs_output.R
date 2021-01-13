@@ -38,18 +38,21 @@ titre_landraces_4Mb <- variables[14]
 titre_csre_4Mb <- variables[15]
 titre_cor_4Mb <- variables[16]
 titre_maps_4Mb <- variables[17]
+titre_permutations_HR <- variables[18]
+titre_overlap_HR <- variables[19]
+titre_overlap_HR_published <-variables[20]
 
 # titre_csre_genotyping <- variables[18]
 # titre_csre_genotyping_matrix <- variables[19]
-titre_FST_SNP <- variables[18]
-titre_FST_haplotypic_blocs <- variables[19]
-titre_FST <- variables[20]
-titre_SNP_positions <- variables[21]
-titre_chr_regions <- variables[22]
-titre_correspondance_chr <- variables[23]
-titre_stab1 <- variables[24]
-titre_landraces <- variables[25]
-titre_stab2 <- variables[26]
+titre_FST_SNP <- variables[21]
+titre_FST_haplotypic_blocs <- variables[22]
+titre_FST <- variables[23]
+titre_SNP_positions <- variables[24]
+titre_chr_regions <- variables[25]
+titre_correspondance_chr <- variables[26]
+titre_stab1 <- variables[27]
+titre_landraces <- variables[28]
+titre_stab2 <- variables[29]
 
 # titre_resume <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
 # titre_csre_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genetic_map.txt"
@@ -71,7 +74,11 @@ titre_stab2 <- variables[26]
 # titre_cor_4Mb<- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
 # titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
 # titre_csre_genotyping <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genotyping.txt"
-
+# 
+# titre_overlap_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/coloc_HR.txt"
+# 
+# titre_permutations_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/permutations.txt"
+# titre_overlap_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/overlap_HRIs_published.txt"
 
 head(fread(titre_resume))
 head(fread(titre_csre_genetic_map))
@@ -82,6 +89,9 @@ head(fread(titre_lambda))
 head(fread(titre_rho))
 head(fread(titre_landraces_4Mb))
 head(fread(titre_csre_4Mb))
+head(fread(titre_permutations_HR))
+head(fread(titre_overlap_HR))
+head(fread(titre_FST_SNP))
 
 
 
@@ -195,42 +205,61 @@ cor_4Mb<- fread(titre_landraces_4Mb) %>%
   arrange(population, chr, region)
 
 
+# overlap of HR
+
+overlap_HR <- fread(titre_permutations_HR) %>%
+  rename(populations=coloc, nbHRIs=n, nb_total_cliques=tcliques) %>%
+  mutate(iteration=iteration+1) %>%
+  rbind(fread(titre_overlap_HR) %>%
+          rename(populations=coloc, nbHRIs=n, nb_total_cliques=tcliques) %>%
+          mutate(iteration="ref"))  %>%
+  arrange(iteration, populations) 
+
+
+
+# Fst
+FST_SNP <- fread(titre_FST_SNP) %>% dplyr::select(chrregion, P1, P2, FST, methode)
+FST <- fread(titre_FST_haplotypic_blocs) %>% dplyr::select(chrregion, P1, P2, FST, methode) %>%
+  rbind(., FST_SNP) %>%
+  mutate(chr=substr(chrregion, 1,2)) %>%
+  mutate(region=substr(chrregion, 3,5)) %>%
+  rename(method=methode) %>%
+  mutate(method=ifelse(method=="haplotype", "haplotypic_blocks", method)) %>%
+  dplyr::select(chr, region, method, P1, P2, FST) %>%
+  mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
+  mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
+  mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
+  arrange(chr, region, method, P1, P2)
+
+
 
 
 
 if (repertoire=="all"){
   
-  head(fread(titre_FST_SNP))
   head(fread(titre_landraces))
   head(fread(titre_SNP_positions))
   head(read.table(titre_correspondance_chr, header=F, dec=".", sep="\t"))
   head(read.table(titre_chr_regions, header=T, dec=".", sep="\t", skip=1))
-  
-  # Fst
-  FST_SNP <- fread(titre_FST_SNP) %>% dplyr::select(chrregion, P1, P2, FST, methode)
-  FST <- fread(titre_FST_haplotypic_blocs) %>% dplyr::select(chrregion, P1, P2, FST, methode) %>%
-    rbind(., FST_SNP) %>%
-    mutate(chr=substr(chrregion, 1,2)) %>%
-    mutate(region=substr(chrregion, 3,5)) %>%
-    rename(method=methode) %>%
-    mutate(method=ifelse(method=="haplotype", "haplotypic_blocks", method)) %>%
-    dplyr::select(chr, region, method, P1, P2, FST) %>%
-    mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
-    mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
-    mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
-    arrange(chr, region, method, P1, P2)
-  
-  
+
   
   
   # landraces data
   
+  
+  
+
+  
   landraces <- fread(titre_landraces) %>%
     filter(kept==T) %>%
-    dplyr::select(population, LINE, Nom_TaBW420K, country, STRgp4, STRarea8) %>%
+    dplyr::select(population, LINE, Nom_TaBW420K, country, STRgp4, STRarea8, STRmemb4_3, STRmemb4_4,STRmemb4_1,STRmemb4_2) %>%
     rename(ID_TaBW420K=Nom_TaBW420K,
            ID_LINE=LINE,
-           STRgp8=STRarea8) %>%
+           STRgp8=STRarea8,
+           CAA=STRmemb4_1,
+           SEA=STRmemb4_2,
+           NWE=STRmemb4_3,
+           SEE=STRmemb4_4) %>%
     mutate(STRgp4=case_when(STRgp4==2 ~ "CAA",
                             STRgp4==5 ~ "SEA",
                             STRgp4==8 ~ "NWE",
@@ -239,6 +268,7 @@ if (repertoire=="all"){
     arrange(population, ID_LINE)
   
   
+
   
   
   # # csre genotyping
@@ -299,13 +329,12 @@ if (repertoire=="all"){
   
   
   
-  head(genomic_regions)
+  print(head(genomic_regions))
   write.table(genomic_regions, titre_stab1, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
   # geno[1:10,1:10]
   # write.table(geno, titre_csre_genotyping_matrix, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-  head(FST)
-  write.table(FST, titre_FST, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-  head(landraces)
+
+  print(head(landraces))
   write.table(landraces, titre_stab2, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
   
   
@@ -336,7 +365,9 @@ write.table(res, titre_PHASE_summary_outputs2, col.names = T, row.names = F, dec
 head(map_4Mb)
 write.table(map_4Mb, titre_maps_4Mb, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 # Outputs from PHASE, median per interval
-
-
+head(overlap_HR)
+write.table(overlap_HR, titre_overlap_HR_published, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
+head(FST)
+write.table(FST, titre_FST, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 
 sessionInfo()

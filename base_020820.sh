@@ -196,6 +196,9 @@ amont_annotation=${r_amont}iwgsc_refseqv1.0_HighConf_UTR_2017May05.gff3
 csre_genotyping=${r_amont}csre_genotyping.txt
 
 
+mks280k=${r_amont}Rimbert_2018_tabs2.txt
+
+
 ## Variables
 
 pop=(WE EE WA EA)
