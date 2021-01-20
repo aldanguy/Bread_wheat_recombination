@@ -10,9 +10,9 @@ source ${base}
 
 
 
-Rscript ${r_scripts}Data_embargo.R ${PLINK_initial}.map ${mks280k} ${r_PLINK}SNP_PLINK_4.txt ${r_published}SNP_positions_280k.txt
+Rscript ${r_scripts}Data_embargo.R ${PLINK_initial}.map ${mks280k} ${r_amont}SNP_positions.txt ${r_PLINK}SNP_PLINK_4.txt ${r_published}SNP_positions_280k.txt
 
-plink --file ${PLINK_initial} --recode --noweb --extract ${r_PLINK}SNP_PLINK_4.txt --out ${r_published}BW_acessions_initial_genotyping_280k >>${r_log}Data_embargo.out
+plink --file ${PLINK_initial} --recode --noweb --extract ${r_PLINK}SNP_PLINK_4.txt --out ${r_published}landraces_initial_genotyping_280k >>${r_log}Data_embargo.out
 
 
 <<COMMENTS
@@ -21,96 +21,106 @@ plink --file ${PLINK_initial} --recode --noweb --extract ${r_PLINK}SNP_PLINK_4.t
 repertoire=${2}
 
 titre_resume=${r_PHASE}PHASE_summary_outputs.txt
-titre_PHASE_summary_outputs2=${r_published}PHASE_summary_outputs_published.txt
+titre_resume2=${r}common_SNP/PHASE/PHASE_summary_outputs.txt
+
+titre_PHASE_summary_outputs2=${r_published}supplementary_file_S7_PHASE_summary_outputs.txt
 
 titre_csre_genetic_map=${r_csre}csre_genetic_map.txt
 titre_landraces_genetic_map=${r_maps_pop}landraces_genetic_maps.txt
-titre_genetic_maps=${r_published}supplementary_tab2.txt
+titre_genetic_maps=${r_published}supplementary_file_S3_recombination_maps.txt
 
 titre_hr=${r_HR}HR.txt
-titre_hr2=${r_published}HR_published.txt
+titre_hr2=${r_published}supplementary_file_S9_HRIs.txt
 titre_cliques=${r_HR}cliques_HR.txt
-titre_cliques2=${r_published}cliques_published.txt
+titre_cliques2=${r_published}supplementary_file_S10_hot_windows.txt
 
 titre_rho=${r_modele}chrregion_rho_random.txt
+titre_rho2=${r}common_SNP/modele/chrregion_rho_random.txt
+
 titre_lambda=${r_modele}chrregion_lambda_random.txt
-titre_correlations_mixed_models=${r_published}correlations_mixed_models_published.txt
+titre_lambda2=${r}common_SNP/modele/chrregion_lambda_random.txt
+
+titre_correlations_mixed_models=${r_published}supplementary_file_S8_correlations_mixed_models.txt
 
 titre_landraces_4Mb=${r_mb}map_4mb_landraces.txt
 titre_csre_4Mb=${r_csre}map_4mb_csre.txt
-titre_cor_4Mb=${r_published}correlations_4mb_published.txt
-titre_maps_4Mb=${r_published}historical_and_meiotic_maps_4Mb_published.txt
+titre_cor_4Mb=${r_published}supplementary_file_S2_correlations_4Mb.txt
+titre_maps_4Mb=${r_published}supplementary_file_S12_historical_and_meiotic_maps_4Mb.txt
 
 titre_permutations_HR=${r_HR}permutations.txt
 titre_overlap_HR=${r_HR}coloc_HR.txt
-titre_overlap_HR_published=${r_published}overlap_HR_published.txt
+titre_overlap_HR_published=${r_published}supplementary_file_S11_overlap_HRIs.txt
 
 
 
 titre_FST_SNP=${r_FST}chrregion_FST_SNP.txt
 titre_FST_haplotypic_blocs=${r_FST}chrregion_FST_haplotypic_blocks.txt
-titre_FST=${r_published}FST_published.txt
+titre_FST=${r_published}supplementary_file_S6_FST.txt
 
 titre_SNP_positions=${r_amont}SNP_positions.txt
 titre_chr_regions=${r_amont}Decoupage_chr_ble.tab
 titre_correspondance_chr=${r_amont}Codes_chr.txt
-titre_stab1=${r_published}supplementary_tab3.txt
+titre_stab1=${r_published}supplementary_file_S5_region_limits.txt
 
 titre_landraces=${r_landraces}landraces.txt
-titre_stab2=${r_published}supplementary_tab1.txt
+titre_stab2=${r_published}supplementary_file_S1_landraces_info.txt
 
 
 
 ##
 v0=${repertoire}
 v1=${titre_resume}
-v2=${titre_PHASE_summary_outputs2}
+v2=${titre_resume2}
+v3=${titre_PHASE_summary_outputs2}
 
-v3=${titre_csre_genetic_map}
-v4=${titre_landraces_genetic_map}
-v5=${titre_genetic_maps}
+v4=${titre_csre_genetic_map}
+v5=${titre_landraces_genetic_map}
+v6=${titre_genetic_maps}
 
-v6=${titre_hr}
-v7=${titre_hr2}
-v8=${titre_cliques}
-v9=${titre_cliques2}
+v7=${titre_hr}
+v8=${titre_hr2}
+v9=${titre_cliques}
+v10=${titre_cliques2}
 
-v10=${titre_rho}
-v11=${titre_lambda}
-v12=${titre_correlations_mixed_models}
+v11=${titre_rho}
+v12=${titre_rho2}
 
-v13=${titre_landraces_4Mb}
-v14=${titre_csre_4Mb}
-v15=${titre_cor_4Mb}
-v16=${titre_maps_4Mb}
+v13=${titre_lambda}
+v14=${titre_lambda2}
 
-v17=${titre_permutations_HR}
-v18=${titre_overlap_HR}
+v15=${titre_correlations_mixed_models}
 
+v16=${titre_landraces_4Mb}
+v17=${titre_csre_4Mb}
+v18=${titre_cor_4Mb}
+v19=${titre_maps_4Mb}
 
-v19=${titre_overlap_HR_published}
-
-
-v20=${titre_FST_SNP}
-v21=${titre_FST_haplotypic_blocs}
-v22=${titre_FST}
-
-v23=${titre_SNP_positions}
-v24=${titre_chr_regions}
-v25=${titre_correspondance_chr}
-v26=${titre_stab1}
-
-v27=${titre_landraces}
-v28=${titre_stab2}
+v20=${titre_permutations_HR}
+v21=${titre_overlap_HR}
 
 
+v22=${titre_overlap_HR_published}
 
-Rscript ${r_scripts}tabs_output.R ${v0} ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14} ${v15} ${v16} ${v17} ${v18} ${v19} ${v20} ${v21} ${v22} ${v23} ${v24} ${v25} ${v26} ${v27} ${v28}
+
+v23=${titre_FST_SNP}
+v24${titre_FST_haplotypic_blocs}
+v25=${titre_FST}
+
+v26=${titre_SNP_positions}
+v27=${titre_chr_regions}
+v28=${titre_correspondance_chr}
+v29=${titre_stab1}
+
+v30=${titre_landraces}
+v31=${titre_stab2}
+
+
+
+Rscript ${r_scripts}tabs_output.R ${v0} ${v1} ${v2} ${v3} ${v4} ${v5} ${v6} ${v7} ${v8} ${v9} ${v10} ${v11} ${v12} ${v13} ${v14} ${v15} ${v16} ${v17} ${v18} ${v19} ${v20} ${v21} ${v22} ${v23} ${v24} ${v25} ${v26} ${v27} ${v28} ${v29} ${v30} ${v31}
 
 
 cp ${r_FST}pairwise_FST_matrix_haplotypic_blocks.txt ${r_published}pairwise_FST_matrix_haplotypic_blocks.txt
-cp ${r_HR}relativ_lambda_HR_populations.txt ${r_published}intensity_under_HR_published.txt
-cp ${r_HR}relativ_lambda_HR_populations.txt ${r_published}intensity_under_HR_published.txt
+cp ${r_HR}relativ_lambda_HR_populations.txt ${r_published}supplementary_file_S4_intensity_under_HRIs.txt
 cp ${r_FST}hapflk_tree_genome.txt ${r_published}HPAFLK_tree_genome_SNP.txt
 
 

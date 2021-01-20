@@ -139,14 +139,12 @@ job_out=${r_log}modele.out
 job_name=cSNP
 job_out=${r_log}common_SNP.out
 # job102=$(sbatch -o ${job_out} -J ${job_name} -p workq --time=00:10:00 --dependency=afterok:${job10} --parsable ${r_scripts}common_SNP_1.sh ${base})
-job102=$(sbatch -o ${job_out} -J ${job_name} -p workq --time=00:10:00 --parsable ${r_scripts}common_SNP_1.sh ${base})
 
 
 ## Highly recombining intervals (HR)
 job_name=HR_1
 job_out=${r_log}HR.out
 # job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --dependency=afterok:${job15} --parsable ${r_scripts}HR_1.sh ${base})
-job16=$(sbatch -o ${job_out} -J ${job_name} -p workq --mem=50G --parsable ${r_scripts}HR_1.sh ${base})
 
 
 ## Position of gene features and HR

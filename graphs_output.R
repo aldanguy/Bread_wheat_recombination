@@ -99,53 +99,53 @@ titre_figure1 <-  variables[23]
 
 
 
- # titre_correlations_4mb_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
- # titre_FST_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/FST_published.txt"
- # titre_correlations_mixed_models_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_mixed_models_published.txt"
- # titre_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/HR_published.txt"
- # titre_cliques_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/titre_cliques_published.txt"
- # titre_matrice_FST_blocs <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/pairwise_FST_matrix_haplotypic_blocks.txt"
- # titre_genetic_maps_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/genetic_maps_published.txt"
- # titre_maps_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/historical_and_meiotic_maps_4Mb_published.txt"
- # titre_f3 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure3.tiff"
- # titre_f2 <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure2.tiff"
- # titre_f4 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure4.tiff"
- # titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure6.tiff"
- # titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes_SNP_common/Figure6.tiff"
- # titre_slopes_SNP_specific_or_common="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/slopes_SNP_specific_or_common.tiff"
- # titre_f5 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes_SNP_common/Figure5.tiff"
- # 
-
-#  titre_overlap_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/overlap_HR_published.txt"
-# titre_intensity_under_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/intensity_under_HR_published.txt"
-# # titre_f5
-
-
-
-# titre_graphe_chromosomes <- paste0(dossier_graphes,"rec_chromosomes.png")
-# titre_graphe_domestication <-   paste0(dossier_graphes,"domestication.png")
-# titre_graphe_HR_partages <-  paste0(dossier_graphes,"HR_shared.png")
-# 
-
-# titre_domestication <- paste0(dossier_amont,"domestication.csv")
-# titre_csre_4Mb <-"/work/adanguy/these/pipeline/020820/csre/map_4mb_csre.txt"
-# titre_resume <- "/work/adanguy/these/pipeline/020820/PHASE/PHASE_summary_outputs.txt"
-# titre_graphe_domestication <-  "/work/adanguy/these/pipeline/020820/graphs/domestication.png"
+   titre_correlations_4mb_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
+   titre_FST_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/FST_published.txt"
+   titre_correlations_mixed_models_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_file_S8_correlations_mixed_models.txt"
+   titre_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/HR_published.txt"
+   titre_cliques_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/titre_cliques_published.txt"
+   titre_matrice_FST_blocs <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/pairwise_FST_matrix_haplotypic_blocks.txt"
+   titre_genetic_maps_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/genetic_maps_published.txt"
+   titre_maps_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/historical_and_meiotic_maps_4Mb_published.txt"
+   titre_f3 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure3.tiff"
+   titre_f2 <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure2.tiff"
+   titre_f4 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure4.tiff"
+   titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure6.tiff"
+   titre_f6 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes_SNP_common/Figure6.tiff"
+   titre_slopes_SNP_specific_or_common="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/slopes_SNP_specific_or_common.tiff"
+   titre_f5 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes_SNP_common/Figure5.tiff"
+   
+  
+   titre_overlap_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/overlap_HR_published.txt"
+  titre_intensity_under_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/intensity_under_HR_published.txt"
+   titre_f5
+  
 
 
+ titre_graphe_chromosomes <- paste0(dossier_graphes,"rec_chromosomes.png")
+ titre_graphe_domestication <-   paste0(dossier_graphes,"domestication.png")
+ titre_graphe_HR_partages <-  paste0(dossier_graphes,"HR_shared.png")
+ 
 
-# titre_landraces2="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_tab2.txt"
-# titre_HAPFLK_tree_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/hapflk_tree_genome.txt"
-# titre_pairwise_FST_matrix_haplotypic_blocks_graph <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/pairwise_FST_matrix_haplotypic_blocks.txt"
-# titre_matrice_FST_png <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/pairwise_FST_matrix_haplotypic_blocks.png"
-# titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
-# titre_figure1 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure1.tiff"
+ titre_domestication <- paste0(dossier_amont,"domestication.csv")
+ titre_csre_4Mb <-"/work/adanguy/these/pipeline/020820/csre/map_4mb_csre.txt"
+ titre_resume <- "/work/adanguy/these/pipeline/020820/PHASE/PHASE_summary_outputs.txt"
+ titre_graphe_domestication <-  "/work/adanguy/these/pipeline/020820/graphs/domestication.png"
 
-# titre_landraces_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_tab2.txt"
-# titre_HAPFLK_tree_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/HPAFLK_tree_genome_SNP.txt"
-# titre_matrice_FST_blocs_png <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphs/pairwise_FST_matrix_haplotypic_blocks.png"
-# titre_figure1 <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/figure1.tiff"
-# 
+
+
+ titre_landraces2="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_tab2.txt"
+ titre_HAPFLK_tree_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/hapflk_tree_genome.txt"
+ titre_pairwise_FST_matrix_haplotypic_blocks_graph <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/pairwise_FST_matrix_haplotypic_blocks.txt"
+ titre_matrice_FST_png <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/pairwise_FST_matrix_haplotypic_blocks.png"
+ titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
+ titre_figure1 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/Figure1.tiff"
+
+ titre_landraces_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_tab2.txt"
+ titre_HAPFLK_tree_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/HPAFLK_tree_genome_SNP.txt"
+ titre_matrice_FST_blocs_png <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphs/pairwise_FST_matrix_haplotypic_blocks.png"
+ titre_figure1 <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/graphes/figure1.tiff"
+ 
 
 
 head(fread(titre_correlations_4mb_published))
@@ -177,7 +177,14 @@ convert_to_adjacency_matrix <- function(dissimilarities, seuil){
 }
 
 
-
+if (repertoire=="common_SNP"){
+  
+  
+  method="common_SNPs"
+} else {
+  
+  method="population_specific_SNPs"
+}
 
 
 R3="#F8766D"
@@ -281,44 +288,48 @@ color_HR=viridis(5)
  #   scale_x_continuous(labels=function(x)x/1e6)
 
 
-# f2b <- fread(titre_maps_4Mb) %>%
-#   mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
-#   filter(population!="CsRe") %>%
-#   filter(chr=="3B") %>%
-#   group_by(population, region) %>%
-#   slice(n()) %>%
-#   ungroup() %>%
-#   mutate(region=lead(region)) %>%
-#   filter(region !="R1") %>%
-#   na.omit() %>%
-#   rbind(., fread(titre_maps_4Mb) %>%
-#           filter(population!="CsRe") %>%
-#           filter(chr=="3B")) %>%
-#   ggplot(aes(x=posl, y=rec_rate, col=region)) + 
-#   geom_line() +
-#   ylab(expression(paste(rho,"*",10^5, " (/kb)"))) +
-#   xlab("physical position (Mb)") +
-#   ggtitle("LD-based") +
-#   theme_light() +
-#   theme(plot.title = element_text(hjust = 0.5)) +
-#   scale_y_continuous(labels=function(x)x*1e5)+
-#   facet_grid(population~.) +
-#   theme(plot.title = element_text(hjust = 0.5, size=16),
-#         strip.text.y = element_text(size = 12, color="black"),
-#         axis.text.y = element_text(size=12),
-#         axis.title.y = element_text(size=14),
-#         axis.text.x = element_text(size=12),
-#         axis.title.x = element_text(size=14),
-#         legend.text=element_text(size=12),
-#         legend.title=element_text(size=14),
-#         strip.background = element_rect(color="black", fill="white"))+ 
-#   scale_colour_manual(values=regions)+
-#   scale_x_continuous(labels=function(x)x/1e6)
+ # f2b <- fread(titre_maps_4Mb) %>%
+ #   mutate(rec_rate=rec_rate*1e3) %>%
+ #   mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
+ #   filter(population!="CsRe") %>%
+ #   filter(chr=="3B") %>%
+ #   group_by(population, region) %>%
+ #   slice(n()) %>%
+ #   ungroup() %>%
+ #   mutate(region=lead(region)) %>%
+ #   filter(region !="R1") %>%
+ #   na.omit() %>%
+ #   rbind(., fread(titre_maps_4Mb) %>%
+ #           mutate(rec_rate=rec_rate*1e3) %>%
+ #           filter(population!="CsRe") %>%
+ #           filter(chr=="3B")) %>%
+ #   mutate(population=factor(population, levels=c("WE","EE","WA","EA"))) %>%
+ #   ggplot(aes(x=posl, y=rec_rate, col=region)) + 
+ #   geom_line() +
+ #   ylab(expression(paste(rho," (/kb)"))) +
+ #   xlab("physical position (Mb)") +
+ #   ggtitle("LD-based") +
+ #   theme_light() +
+ #   theme(plot.title = element_text(hjust = 0.5)) +
+ #   facet_grid(population~., scales="free") +
+ #   theme(plot.title = element_text(hjust = 0.5, size=16),
+ #         strip.text.y = element_text(size = 12, color="black"),
+ #         axis.text.y = element_text(size=12),
+ #         axis.title.y = element_text(size=14),
+ #         axis.text.x = element_text(size=12),
+ #         axis.title.x = element_text(size=14),
+ #         legend.text=element_text(size=12),
+ #         legend.title=element_text(size=14),
+ #         panel.grid.minor = element_blank(),
+ #         strip.background = element_rect(color="black", fill="white"))+ 
+ #   scale_colour_manual(values=regions)+
+ #   scale_x_continuous(labels=function(x)x/1e6)+
+ #   scale_y_continuous(breaks = c(0,0.01,0.02,0.03,0.04,0.05,0.06), labels = c("0.0","0.1","0.2","0.3","0.4","0.5","0.6"))
+ 
  
  
  f2b <- fread(titre_maps_4Mb) %>%
-   mutate(rec_rate=log10(rec_rate)) %>%
-   
+   mutate(rec_rate=rec_rate*1e3) %>%
    mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
    filter(population!="CsRe") %>%
    filter(chr=="3B") %>%
@@ -329,13 +340,13 @@ color_HR=viridis(5)
    filter(region !="R1") %>%
    na.omit() %>%
    rbind(., fread(titre_maps_4Mb) %>%
-           mutate(rec_rate=log10(rec_rate)) %>%
-           
+           mutate(rec_rate=rec_rate*1e3) %>%
            filter(population!="CsRe") %>%
            filter(chr=="3B")) %>%
+   mutate(population=factor(population, levels=c("WE","EE","WA","EA"))) %>%
    ggplot(aes(x=posl, y=rec_rate, col=region)) + 
    geom_line() +
-   ylab(expression(paste("log10(",rho,") (/kb)"))) +
+   ylab(expression(paste(rho, " (/kb)"))) +
    xlab("physical position (Mb)") +
    ggtitle("LD-based") +
    theme_light() +
@@ -351,12 +362,13 @@ color_HR=viridis(5)
          legend.title=element_text(size=14),
          strip.background = element_rect(color="black", fill="white"))+ 
    scale_colour_manual(values=regions)+
-   scale_x_continuous(labels=function(x)x/1e6)
+   scale_x_continuous(labels=function(x)x/1e6)+
+   scale_y_continuous(trans="log10", breaks = c(1e-4, 1e-3,1e-2), labels = c(expression(10^-4),expression(10^-3),expression(10^-2)) ) 
+   
 
     
 
 
-f2 <- ggarrange(f2a,f2b, ncol=2,nrow=1, widths = c(0.33,0.66), common.legend = T, legend = "bottom")
 f2 <- ggdraw() +
   draw_plot(f2a, x=0, y=0.22, width=0.33, height = 0.565) +
   draw_plot(f2b, x=0.33, y=0,width=0.66, height = 1) 
@@ -386,7 +398,7 @@ f3all <- fread(titre_maps_4Mb) %>%
   geom_point(size=0.5)+
   theme_light() +
   scale_x_continuous(trans="log10", breaks = c(1e-2, 1e-1,1, 10), labels = function(x) ifelse(x == 1, "1", x)) +
-  scale_y_continuous(trans="log10", breaks = c(1e-5,1e-3,1e-1), limits = c(minimum_WE, 1e-1))  +
+  scale_y_continuous(trans="log10", breaks = c(1e-5,1e-3,1e-1), limits = c(minimum_WE, 1e-1), labels =c(expression(10^-5),expression(10^-3),expression(10^-1)))  +
   theme(plot.title = element_text(hjust = 0.5, size=14, vjust=-1),
         axis.text.y =element_text(size=14),
         axis.title.y = element_blank(),
@@ -425,8 +437,9 @@ f3_cor_regions <- function(nom_region, col_region ) {
                  pivot_wider(id_cols = c("chr","region","posl","posr"), names_from = "population", values_from = "rec_rate") %>%
                  mutate(WE=1e3*WE) %>%
                  filter(region==!!nom_region), aes(x=CsRe, y=WE), col=col_region, size=0.5)  +
-    scale_x_continuous(trans="log10", breaks = c(1e-2, 1e-1,1, 10), labels = function(x) ifelse(x == 1, "1", x)) +
-    scale_y_continuous(trans="log10", breaks = c(1e-5,1e-3,1e-1), limits = c(minimum_WE, 1e-1))  +
+    scale_x_continuous(trans="log10", breaks = c(1e-2, 1e-1,1, 10), labels = c(expression(10^-2),expression(10^-1),1,10)) +
+    
+    scale_y_continuous(trans="log10", breaks = c(1e-5,1e-3,1e-1), limits = c(minimum_WE, 1e-1), labels =c(expression(10^-5),expression(10^-3),expression(10^-1)))  +
     theme_light() +
     xlab("") +
     ylab("")  + 
@@ -446,7 +459,8 @@ f3_cor_regions <- function(nom_region, col_region ) {
   
 }
 
-
+#scale_x_continuous(trans="log10", breaks = c(1e-2, 1e-1,1, 10), labels = function(x) ifelse(x == 1, "1", x)) +
+  
 f3R1 <- f3_cor_regions(nom_region = "R1", col_region = R1) 
 f3R2a <- f3_cor_regions(nom_region = "R2a", col_region = R2a) + theme(axis.text.y =element_text(size=14))
 f3R2b <- f3_cor_regions(nom_region = "R2b", col_region = R2b) + theme(axis.text.y =element_text(size=14)) + theme(axis.text.x =element_text(size=14))
@@ -583,6 +597,7 @@ matrice_fst_blocs <- read.table(titre_matrice_FST_blocs) %>% as.matrix() %>%
 # 
 
 fread(titre_correlations_mixed_models_published) %>% 
+  filter(region !="C") %>%
   mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
   mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
   group_by(P1,P2) %>%
@@ -637,7 +652,8 @@ if (repertoire =="all"){
     mutate(signif=c("a","b","cd","b","d","c")) %>%
     rowwise() %>%
     mutate(P=paste0(P1,"-",P2)) %>%
-    arrange(signif)%>%
+    mutate(P = factor(P, levels=c("WE-EE","EE-WA", "WE-WA" ,"WA-EA","EE-EA", "WE-EA" ))) %>%
+    arrange(P)%>%
     dplyr::select(P, signif)
   
   
@@ -661,6 +677,7 @@ if (repertoire =="all"){
     mutate(signif=c("a","ab","c","b","c","c")) %>%
     rowwise() %>%
     mutate(P=paste0(P1,"-",P2)) %>%
+    mutate(P = factor(P, levels=c("WE-EE","EE-WA", "WE-WA" ,"WA-EA","EE-EA", "WE-EA" ))) %>%
     arrange(signif)%>%
     dplyr::select(P, signif)
   
@@ -670,61 +687,98 @@ if (repertoire =="all"){
 
 
 
-
-f4 <- fread(titre_correlations_mixed_models_published) %>% 
-  mutate(P=paste0(P1,"-",P2)) %>%
-  mutate(P = factor(P, levels=c("WE-EE","WE-WA", "EE-WA","WA-EA","WE-EA", "EE-EA"))) %>%
-  ggplot(aes(x=P,y=cor_lambda, fill=P)) + 
-  geom_boxplot()+
-  scale_fill_manual(values=c(WEEE,EEWA,WAEA,WEWA,EEEA,WEEA), 
-                    labels=matrice_fst_blocs$FST,name="")+
-  theme_light()+
-  theme(plot.title = element_text(hjust = 0.5, size=24),
-        axis.text.y = element_text(size=22),
-        axis.title.y = element_text(size=24),
-        axis.text.x = element_text(size=22, angle = 45, hjust=1),
-        axis.title.x = element_text(size=24),
-        legend.text=element_text(size=22, colour="red"),
-        legend.title=element_text(size=24, colour="red"),
-        legend.key = element_rect(fill = "white"),
-        legend.key.width = unit(3, "cm"),
-        legend.key.height = unit(2, "cm"),
-        legend.position = "bottom",
-        legend.box = "horizontal",
-        legend.direction = "horizontal", 
-        legend.spacing.x = unit(1.7, 'cm'))+
-  guides(fill = guide_legend(label.hjust = 0.3, 
-                             label.position = "top",
-                             title.position = "top",
-                             title.hjust = 0.5,
-                             nrow = 1,
-                             override.aes=list(fill=NA, col=NA, shape=NA))) +
-  
-  xlab("") +
-  stat_summary(geom = 'text', 
-               label = texte$signif, 
-               fun.y = max, 
-               vjust = -1, 
-               size=10)  +
-  scale_y_continuous(limits = c(min(fread(titre_correlations_mixed_models_published)$cor_lambda),
-                                max(fread(titre_correlations_mixed_models_published)$cor_lambda)+0.1))+
-  ylab(expression(paste("correlation log10(", lambda, ")")))
-
-
-
-arrow_p <- 
-  ggplot(tips) +
-  geom_segment(aes(x = 0, y = 0, xend = 42, yend = 0),
-               col = "red",
-               arrow = arrow(length = unit(0.3, "cm"))) +
-  coord_cartesian(ylim = c(0, 0.75), xlim = c(0,50)) +
-  theme_void()
+ 
+ f4 <- fread(titre_correlations_mixed_models_published) %>% 
+   filter(method==method) %>%
+   mutate(P=paste0(P1,"-",P2)) %>%
+   mutate(P = factor(P, levels=c("WE-EE","WE-WA", "EE-WA","WA-EA","EE-EA","WE-EA"))) %>%
+   ggplot(aes(x=P,y=cor_lambda, fill=P)) + 
+   geom_boxplot()+
+   scale_fill_manual(values=c(WEEE,EEWA,WAEA,WEWA,EEEA,WEEA), 
+                     labels=matrice_fst_blocs$FST,name="")+
+   theme_light()+
+   theme(plot.title = element_text(hjust = 0.5, size=24),
+         axis.text.y = element_text(size=22),
+         axis.title.y = element_text(size=24),
+         axis.text.x = element_text(size=22, angle = 45, hjust=1),
+         axis.title.x = element_text(size=24),
+         legend.text=element_text(size=22, colour="red"),
+         legend.title=element_text(size=24, colour="red"),
+         legend.key = element_rect(fill = "white"),
+         legend.key.width = unit(3, "cm"),
+         legend.key.height = unit(2, "cm"),
+         legend.position = "bottom",
+         legend.box = "horizontal",
+         legend.direction = "horizontal", 
+         legend.spacing.x = unit(1.7, 'cm'))+
+   guides(fill = guide_legend(label.hjust = 0.3, 
+                              label.position = "top",
+                              title.position = "top",
+                              title.hjust = 0.5,
+                              nrow = 1,
+                              override.aes=list(fill=NA, col=NA, shape=NA))) +
+   
+   xlab("") +
+   stat_summary(geom = 'text', 
+                label = texte$signif, 
+                fun.y = max, 
+                vjust = -1, 
+                size=10)  +
+   scale_y_continuous(limits = c(min(fread(titre_correlations_mixed_models_published)$cor_lambda),
+                                 max(fread(titre_correlations_mixed_models_published)$cor_lambda)+0.1))+
+   ylab(expression(paste("correlation log10(", lambda, ")")))
 
 
-f4f <-ggdraw() +
-  draw_plot(f4) +
-  draw_plot(arrow_p, x = 0.1, y = 0.05)+
-  draw_plot_label(c("Fst (%)"), c(-0.04), c(0.13), size = 25, color="red", fontface = "plain", family = "sans")
+
+ arrow_p <- 
+   ggplot(tips) +
+   geom_segment(aes(x = 0, y = 0, xend = 42, yend = 0),
+                col = "red",
+                arrow = arrow(length = unit(0.3, "cm"))) +
+   coord_cartesian(ylim = c(0, 0.75), xlim = c(0,50)) +
+   theme_void()
+ 
+ 
+ f4f <-ggdraw() +
+   draw_plot(f4) +
+   draw_plot(arrow_p, x = 0.1, y = 0.05)+
+   draw_plot_label(c("Fst (%)"), c(-0.04), c(0.13), size = 25, color="red", fontface = "plain", family = "sans")
+ f4f
+
+# f4f <- fread(titre_correlations_mixed_models_published) %>% 
+#   filter(method==method) %>%
+#   filter(region !="C") %>%
+#   mutate(P=paste0(P1,"-",P2)) %>%
+#   full_join(matrice_fst_blocs, by="P") %>%
+#   mutate(P = factor(P, levels=c("WE-EE","EE-WA", "WE-WA" ,"WA-EA","EE-EA", "WE-EA" ))) %>%
+#   mutate(FST =as.factor(FST)) %>%
+#   ggplot(aes(x=FST,y=cor_lambda, fill=P, group=P)) + 
+#   geom_boxplot()+
+#   scale_fill_manual(values=c(WEEE,EEWA,WAEA,WEWA,EEEA,WEEA),name="")+
+#   theme_light()+
+#   theme(plot.title = element_text(hjust = 0.5, size=24),
+#         axis.text.y = element_text(size=22),
+#         axis.title.y = element_text(size=24),
+#         axis.text.x = element_text(size=22),
+#         axis.title.x = element_text(size=24),
+#       legend.key.size = unit(1, "cm"),
+#       legend.position = "bottom",
+#       legend.spacing.x = unit(0.5, 'cm'),
+#         legend.text=element_text(size=22))+
+#   
+#   xlab("") +
+#   guides(fill = guide_legend(nrow=1))+
+#   stat_summary(geom = 'text', 
+#                label = texte$signif, 
+#                fun.y = max, 
+#                vjust = -1, 
+#                size=10)  +
+#   scale_y_continuous(limits = c(min(fread(titre_correlations_mixed_models_published) %>% filter(region != "C") %>%   filter(method=="population_specific_SNPs") %>%dplyr::select(cor_lambda)),
+#                                 max(fread(titre_correlations_mixed_models_published) %>% filter(region != "C")  %>% filter(method=="population_specific_SNPs") %>% dplyr::select(cor_lambda))+0.1))+
+#   ylab(expression(paste("correlation log10(", lambda, ")")))
+# f4f
+
+
 
 f4f
 tiff(titre_f4, units="in", width = 12, height = 9, res=200, compression = "lzw")
@@ -867,22 +921,22 @@ f6a <- fread(titre_correlations_mixed_models_published) %>%
   scale_color_manual(values=slopes_signif) +
   facet_grid(region~chr, scales="free") +
   theme_light() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, size=5))+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, size=10))+
+  theme( axis.text.y = element_text(size=10)) +
   theme(legend.position="bottom") +
   ylab(expression(paste("correlation of log10(", lambda,")"))) +
-  xlab("Fst (%, from haplotypic alleles)") +
-  guides(colour=guide_legend("95% confidence interval of slope estimate : "))+
+  xlab("\nFst (%, from haplotypic alleles)") +
+  guides(colour=guide_legend(title="95% confidence interval of slope estimate : ", override.aes = list(size = 3)))+
   scale_y_continuous(breaks=c(-1,-0.5,0,0.5,1))+
   scale_x_continuous( labels=function(x)x*100,breaks=seq(0,1,0.05))+
-  theme(strip.text.y = element_text(size = 14, color="black"),
-        strip.text.x = element_text(size = 14, color="black"),
+  theme(strip.text.y = element_text(size = 22, color="black"),
+        strip.text.x = element_text(size = 22, color="black"),
         strip.background = element_rect(color="black", fill="white"),
-        axis.title.y = element_text(size=14),
-        axis.title.x = element_text(size=14),
-        legend.text=element_text(size=14),
-        legend.title=element_text(size=14),
+        axis.title.y = element_text(size=22),
+        axis.title.x = element_text(size=22),
+        legend.text=element_text(size=22),
+        legend.title=element_text(size=22),
         panel.grid.minor = element_blank())
-
 f6a
 
 
@@ -898,13 +952,14 @@ f6b <- slopes_lambda_haplotypic_blocks %>%
   geom_vline(xintercept=0,col=slopes_signif[2], size=1) +
   xlab(label='Fst effect') + ylab( label = "genomic region") +
   theme_light()+
-  theme( axis.text.y = element_text(size=6)) +
+  theme( axis.text.y = element_text(size=10)) +
+  theme( axis.text.x = element_text(size=18)) +
   theme(legend.position="none") +
   guides(colour=guide_legend("95% confidence interval of slope estimate: "))+
-  theme(axis.title.y = element_text(size=14),
-        axis.title.x = element_text(size=14),
-        legend.text=element_text(size=14),
-        legend.title=element_text(size=14),
+  theme(axis.title.y = element_text(size=22),
+        axis.title.x = element_text(size=22),
+        legend.text=element_text(size=22),
+        legend.title=element_text(size=22),
         panel.grid.minor = element_blank())
 
 
@@ -913,7 +968,7 @@ f6b <- slopes_lambda_haplotypic_blocks %>%
 f6 <- ggdraw() +
   draw_plot(f6a, x=-0.33, y=0,1, 0.5, width =1.35) +
   draw_plot(f6b,x=0.7,y=0,1,width=0.3)+
-  draw_plot_label(c("A", "B"), c(0,0.68), c(0.8,1), size = 20)
+  draw_plot_label(c("A", "B"), c(0,0.68), c(0.85,1), size = 30)
 
 
 f6

@@ -2,7 +2,7 @@
 
 
 Sys.time()
-cat("\n\nGraphs_output.R\n\n")
+cat("\n\nData_embargo.R\n\n")
 rm(list = ls())
 graphics.off()
 set.seed(1)
@@ -12,23 +12,38 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(data.table))
 
 
-titre_280 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Rimbert_2018.txt"
-#titre_map_final <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces_final.map"
-titre_map_initial <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/donnees_publiees/BW_261K_wp3.map"
-titre_SNP_positions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/SNP_positions.txt"
-# titre_WE <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/WE.map"
-# titre_EE <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/EE.map"
-# titre_WA <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/WA.map"
-# titre_EA <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/EA.map"
-# titre_PHASE <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
-# 
-titre_snp_pos_280k
-titre_mqs_280k_initial <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/SNP_PLINK4_mqs_280k_initial"
+variables <- commandArgs(trailingOnly=TRUE)
+
+cat("\n Graphics\n")
+cat("\n\nVariables : \n")
+print(variables)
+cat("\n\n")
+
+
+titre_map_initial <- variables[1]
+titre_280 <- variables[2]
+titre_snp_positions <- variables[3]
+titre_mqs_280k_initial <- variables[4]
+titre_snp_pos_280k <- variables[5]
+
+
+# titre_280 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Rimbert_2018.txt"
+# #titre_map_final <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces_final.map"
+# titre_map_initial <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/donnees_publiees/BW_261K_wp3.map"
+# titre_SNP_positions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/SNP_positions.txt"
+# # titre_WE <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/WE.map"
+# # titre_EE <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/EE.map"
+# # titre_WA <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/WA.map"
+# # titre_EA <-  "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/EA.map"
+# # titre_PHASE <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
+# # 
+# titre_snp_pos_280k
+# titre_mqs_280k_initial <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/SNP_PLINK4_mqs_280k_initial"
 
 # proportion of SNP in final map from TABW280k
 
 liste_280k <- fread(titre_280) %>% dplyr::select(PROBESET_ID) %>% unlist() %>% as.vector()
-snp_pos <- fread(titre_SNP_positions)
+snp_pos <- fread(titre_snp_positions)
 
 # map_final <- fread(titre_map_final)
 map_initial <- fread(titre_map_initial)

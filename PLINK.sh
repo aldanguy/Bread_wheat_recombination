@@ -13,11 +13,13 @@ source ${base}
 pop=landraces
 
 
-plink --file ${PLINK_initial} --recode --keep ${r_PLINK}landraces_PLINK.txt --extract ${r_PLINK}SNP_PLINK.txt --update-map ${r_PLINK}update_posSNP.txt --noweb --out ${r_landraces}landraces >>${r_log}PLINK.out
+# plink --file ${PLINK_initial} --recode --keep ${r_PLINK}landraces_PLINK.txt --extract ${r_PLINK}SNP_PLINK.txt --update-map ${r_PLINK}update_posSNP.txt --noweb --out ${r_landraces}landraces >>${r_log}PLINK.out
 
-plink --file ${r_landraces}landraces --recode --update-map ${r_PLINK}update_genSNP.txt --update-cm --noweb --out ${r_landraces}landraces >>${r_log}PLINK.out
+# plink --file ${r_landraces}landraces --recode --update-map ${r_PLINK}update_genSNP.txt --update-cm --noweb --out ${r_landraces}landraces >>${r_log}PLINK.out
 
-plink --file ${r_landraces}landraces --recode --maf 0.000000001 --noweb --geno ${rate_NA_max} --mind ${rate_NA_max} --out ${r_landraces}landraces >>${r_log}PLINK.out
+# plink --file ${r_landraces}landraces --recode --maf 0.000000001 --noweb --geno ${rate_NA_max} --mind ${rate_NA_max} --out ${r_landraces}landraces >>${r_log}PLINK.out
+
+plink --file ${PLINK_initial} --recode --maf 0.000000001 --noweb --geno ${rate_NA_max} --mind ${rate_NA_max} --out ${r_landraces}landraces >>${r_log}PLINK.out
 
 
 plink --file ${r_landraces}landraces --recode --freq --noweb --out ${r_landraces}landraces >>${r_log}PLINK.out

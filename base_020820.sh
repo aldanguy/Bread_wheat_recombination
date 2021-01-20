@@ -183,7 +183,8 @@ chr_names=${r_amont}Codes_chr.txt
 
 chr_tab=${r_amont}Decoupage_chr_ble.tab
 
-PLINK_initial=${r_amont}BW_261K_wp3
+# PLINK_initial=${r_amont}BW_261K_wp3
+PLINK_initial=${r_published}landraces_initial_genotyping_410k
 
 haplotypic_blocks=${r_amont}landrace632_8741hap_sophie.var
 

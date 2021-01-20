@@ -23,75 +23,85 @@ cat("\n\n")
 
 repertoire <- variables[1]
 titre_resume <-variables[2]
-titre_PHASE_summary_outputs2 <- variables[3]
-titre_csre_genetic_map <- variables[4]
-titre_landraces_genetic_map <- variables[5]
-titre_genetic_maps <- variables[6]
-titre_hr <- variables[7]
-titre_hr2 <- variables[8]
-titre_cliques <- variables[9]
-titre_cliques2 <- variables[10]
-titre_rho <- variables[11]
-titre_lambda <- variables[12]
-titre_correlations_mixed_models <- variables[13]
-titre_landraces_4Mb <- variables[14]
-titre_csre_4Mb <- variables[15]
-titre_cor_4Mb <- variables[16]
-titre_maps_4Mb <- variables[17]
-titre_permutations_HR <- variables[18]
-titre_overlap_HR <- variables[19]
-titre_overlap_HR_published <-variables[20]
+titre_resume2 <-variables[3]
+
+titre_PHASE_summary_outputs2 <- variables[4]
+titre_csre_genetic_map <- variables[5]
+titre_landraces_genetic_map <- variables[6]
+titre_genetic_maps <- variables[7]
+titre_hr <- variables[8]
+titre_hr2 <- variables[9]
+titre_cliques <- variables[10]
+titre_cliques2 <- variables[11]
+titre_rho <- variables[12]
+titre_rho2 <- variables[13]
+titre_lambda <- variables[14]
+
+titre_lambda2 <- variables[15]
+titre_correlations_mixed_models <- variables[16]
+titre_landraces_4Mb <- variables[17]
+titre_csre_4Mb <- variables[18]
+titre_cor_4Mb <- variables[19]
+titre_maps_4Mb <- variables[20]
+titre_permutations_HR <- variables[21]
+titre_overlap_HR <- variables[22]
+titre_overlap_HR_published <-variables[23]
 
 # titre_csre_genotyping <- variables[18]
 # titre_csre_genotyping_matrix <- variables[19]
-titre_FST_SNP <- variables[21]
-titre_FST_haplotypic_blocs <- variables[22]
-titre_FST <- variables[23]
-titre_SNP_positions <- variables[24]
-titre_chr_regions <- variables[25]
-titre_correspondance_chr <- variables[26]
-titre_stab1 <- variables[27]
-titre_landraces <- variables[28]
-titre_stab2 <- variables[29]
+titre_FST_SNP <- variables[24]
+titre_FST_haplotypic_blocs <- variables[25]
+titre_FST <- variables[26]
+titre_SNP_positions <- variables[27]
+titre_chr_regions <- variables[28]
+titre_correspondance_chr <- variables[29]
+titre_stab1 <- variables[30]
+titre_landraces <- variables[31]
+titre_stab2 <- variables[32]
 
-# titre_resume <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
-# titre_csre_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genetic_map.txt"
-# titre_landraces_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces_genetic_map.txt"
-# titre_FST_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_FST_SNP.txt"
-# titre_FST_haplotypic_blocs <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_FST_haplotypic_blocks.txt"
-# titre_SNP_positions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/SNP_positions.txt"
-# titre_chr_regions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Decoupage_chr_ble.tab"
-# titre_correspondance_chr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Codes_chr.txt"
-# titre_hr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/HR.txt"
-# titre_cliques <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/cliques_HR.txt"
-# titre_lambda <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_lambda_random.txt"
-# titre_lambda2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_lambda_random.txt"
-# titre_rho <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_rho_random.txt"
-# titre_rho2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_rho_random.txt"
-# titre_correlations_mixed_models2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/correlations_mixed_models_published.txt"
-# titre_landraces_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_landraces.txt"
-# titre_csre_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_csre.txt"
-# titre_cor_4Mb<- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
-# titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
-# titre_csre_genotyping <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genotyping.txt"
-# 
-# titre_overlap_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/coloc_HR.txt"
-# 
-# titre_permutations_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/permutations.txt"
-# titre_overlap_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/overlap_HRIs_published.txt"
+ titre_resume <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/PHASE_summary_outputs.txt"
+ titre_resume2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/PHASE_summary_outputs.txt"
+ 
+ titre_csre_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genetic_map.txt"
+ titre_landraces_genetic_map <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces_genetic_map.txt"
+ titre_FST_SNP <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_FST_SNP.txt"
+ titre_FST_haplotypic_blocs <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_FST_haplotypic_blocks.txt"
+ titre_SNP_positions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/SNP_positions.txt"
+ titre_chr_regions <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Decoupage_chr_ble.tab"
+ titre_correspondance_chr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/amont/Codes_chr.txt"
+ titre_hr <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/HR.txt"
+ titre_cliques <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/cliques_HR.txt"
+ titre_lambda <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_lambda_random.txt"
+ titre_lambda2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_lambda_random.txt"
+ titre_rho <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/chrregion_rho_random.txt"
+ titre_rho2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/chrregion_rho_random.txt"
+ titre_correlations_mixed_models2 <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/common_SNP/correlations_mixed_models_published.txt"
+ titre_landraces_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_landraces.txt"
+ titre_csre_4Mb <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/map_4mb_csre.txt"
+ titre_cor_4Mb<- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/correlations_4mb_published.txt"
+ titre_landraces <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/landraces.txt"
+ titre_csre_genotyping <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/csre_genotyping.txt"
+ 
+ titre_overlap_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/coloc_HR.txt"
+ 
+ titre_permutations_HR <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/permutations.txt"
+ titre_overlap_HR_published <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/overlap_HRIs_published.txt"
 
-head(fread(titre_resume))
+ titre_PHASE_summary_outputs2="/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_file_9_PHASE_summary_outputs.txt"
+ titre_correlations_mixed_models <- "/home/adanguydesd/Documents/These_Alice/recombinaison/pipeline/020820/tabs/supplementary_file_11_correlations_mixed_models.txt"
+
+
+
+
 head(fread(titre_csre_genetic_map))
 head(fread(titre_landraces_genetic_map))
 head(fread(titre_hr))
 head(fread(titre_cliques))
-head(fread(titre_lambda))
-head(fread(titre_rho))
 head(fread(titre_landraces_4Mb))
 head(fread(titre_csre_4Mb))
 head(fread(titre_permutations_HR))
 head(fread(titre_overlap_HR))
-head(fread(titre_FST_SNP))
+
 
 
 
@@ -106,16 +116,6 @@ map_4Mb <- fread(titre_landraces_4Mb) %>%
 
 
 
-# PHASE summary outputs
-res <- fread(titre_resume) %>% 
-  filter(w_center==T) %>%
-  dplyr::select(population, chr, region, ID, posSNPlpop, posSNPrpop, SNPlpop, SNPrpop, lambda_med, rho_med, lambda_rho_med) %>%
-  rename(PHASE_window_ID=ID,
-         SNPl=SNPlpop,
-         SNPr=SNPrpop,
-         posl=posSNPlpop,
-         posr=posSNPrpop) %>%
-  arrange(population, chr, posl)
 
 
 
@@ -162,33 +162,6 @@ cliques <- fread(titre_cliques) %>%
 
 
 
-# mixed model correlations
-
-lambda <- fread(titre_lambda) %>%
-  dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
-  mutate(chr=substr(chrregion, 1,2)) %>%
-  mutate(region=substr(chrregion, 3,5)) %>%
-  rename(cor_lambda=estimateur,
-         BIC_lambda=BIC) %>%
-  dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda)
-
-
-correlations_mixed_models <- fread(titre_rho) %>%
-  dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
-  mutate(chr=substr(chrregion, 1,2)) %>%
-  mutate(region=substr(chrregion, 3,5)) %>%
-  rename(cor_rho=estimateur,
-         BIC_rho=BIC) %>%
-  dplyr::select(chr, region, P1, P2, cor_rho, BIC_rho) %>%
-  full_join(lambda, by=c("chr"="chr","region"="region", "P1"="P1", "P2"="P2")) %>%
-  dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda, cor_rho, BIC_rho)  %>%
-  mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
-  mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
-  mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
-  arrange(chr, region, P1, P2) %>%
-  filter(P1 !=P2)
-
-
 
 
 
@@ -217,21 +190,6 @@ overlap_HR <- fread(titre_permutations_HR) %>%
 
 
 
-# Fst
-FST_SNP <- fread(titre_FST_SNP) %>% dplyr::select(chrregion, P1, P2, FST, methode)
-FST <- fread(titre_FST_haplotypic_blocs) %>% dplyr::select(chrregion, P1, P2, FST, methode) %>%
-  rbind(., FST_SNP) %>%
-  mutate(chr=substr(chrregion, 1,2)) %>%
-  mutate(region=substr(chrregion, 3,5)) %>%
-  rename(method=methode) %>%
-  mutate(method=ifelse(method=="haplotype", "haplotypic_blocks", method)) %>%
-  dplyr::select(chr, region, method, P1, P2, FST) %>%
-  mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
-  mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
-  mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
-  arrange(chr, region, method, P1, P2)
-
-
 
 
 
@@ -241,7 +199,114 @@ if (repertoire=="all"){
   head(fread(titre_SNP_positions))
   head(read.table(titre_correspondance_chr, header=F, dec=".", sep="\t"))
   head(read.table(titre_chr_regions, header=T, dec=".", sep="\t", skip=1))
-
+  head(fread(titre_resume))
+  head(fread(titre_resume2))
+  head(fread(titre_lambda))
+  head(fread(titre_lambda2))
+  
+  head(fread(titre_rho))
+  head(fread(titre_rho2))
+  
+  head(fread(titre_FST_SNP))
+  
+  # Fst
+  FST_SNP <- fread(titre_FST_SNP) %>% dplyr::select(chrregion, P1, P2, FST, methode)
+  FST <- fread(titre_FST_haplotypic_blocs) %>% dplyr::select(chrregion, P1, P2, FST, methode) %>%
+    rbind(., FST_SNP) %>%
+    mutate(chr=substr(chrregion, 1,2)) %>%
+    mutate(region=substr(chrregion, 3,5)) %>%
+    rename(method=methode) %>%
+    mutate(method=ifelse(method=="haplotype", "haplotypic_blocks", method)) %>%
+    dplyr::select(chr, region, method, P1, P2, FST) %>%
+    mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
+    mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
+    mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
+    arrange(chr, region, method, P1, P2)
+  
+  
+  
+  
+  
+  # mixed model correlations
+  
+  lambda <- fread(titre_lambda) %>%
+    dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
+    mutate(chr=substr(chrregion, 1,2)) %>%
+    mutate(region=substr(chrregion, 3,5)) %>%
+    rename(cor_lambda=estimateur,
+           BIC_lambda=BIC) %>%
+    dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda)
+  
+  
+  correlations_mixed_models <- fread(titre_rho) %>%
+    dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
+    mutate(chr=substr(chrregion, 1,2)) %>%
+    mutate(region=substr(chrregion, 3,5)) %>%
+    rename(cor_rho=estimateur,
+           BIC_rho=BIC) %>%
+    dplyr::select(chr, region, P1, P2, cor_rho, BIC_rho) %>%
+    full_join(lambda, by=c("chr"="chr","region"="region", "P1"="P1", "P2"="P2")) %>%
+    dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda, cor_rho, BIC_rho)  %>%
+    mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
+    mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
+    mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
+    arrange(chr, region, P1, P2) %>%
+    filter(P1 !=P2) %>%
+    mutate(method="population_specific_SNPs")
+  
+  
+  lambda2 <- fread(titre_lambda2) %>%
+    dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
+    mutate(chr=substr(chrregion, 1,2)) %>%
+    mutate(region=substr(chrregion, 3,5)) %>%
+    rename(cor_lambda=estimateur,
+           BIC_lambda=BIC) %>%
+    dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda)
+  
+  
+  correlations_mixed_models2 <- fread(titre_rho2) %>%
+    dplyr::select(chrregion, P1, P2, estimateur, BIC) %>%
+    mutate(chr=substr(chrregion, 1,2)) %>%
+    mutate(region=substr(chrregion, 3,5)) %>%
+    rename(cor_rho=estimateur,
+           BIC_rho=BIC) %>%
+    dplyr::select(chr, region, P1, P2, cor_rho, BIC_rho) %>%
+    full_join(lambda2, by=c("chr"="chr","region"="region", "P1"="P1", "P2"="P2")) %>%
+    dplyr::select(chr, region, P1, P2, cor_lambda, BIC_lambda, cor_rho, BIC_rho)  %>%
+    mutate(region=factor(region, levels=c("R1","R2a","C","R2b","R3"))) %>%
+    mutate(P1=factor(P1, levels=c("WE","EE","WA","EA"))) %>%
+    mutate(P2=factor(P2, levels=c("WE","EE","WA","EA"))) %>%
+    arrange(chr, region, P1, P2) %>%
+    filter(P1 !=P2)%>%
+    mutate(method="common_SNPs")
+  
+  correlations_mixed_models <- rbind(correlations_mixed_models, correlations_mixed_models2)
+  
+  
+  # PHASE summary outputs
+  res <- fread(titre_resume) %>% 
+    filter(w_center==T) %>%
+    dplyr::select(population, chr, region, ID, posSNPlpop, posSNPrpop, SNPlpop, SNPrpop, lambda_med, rho_med, lambda_rho_med) %>%
+    rename(PHASE_window_ID=ID,
+           SNPl=SNPlpop,
+           SNPr=SNPrpop,
+           posl=posSNPlpop,
+           posr=posSNPrpop) %>%
+    arrange(population, chr, posl)%>%
+    mutate(method="population_specific_SNPs")
+  
+  res2 <- fread(titre_resume2) %>% 
+    filter(w_center==T) %>%
+    dplyr::select(population, chr, region, ID, posSNPlpop, posSNPrpop, SNPlpop, SNPrpop, lambda_med, rho_med, lambda_rho_med) %>%
+    rename(PHASE_window_ID=ID,
+           SNPl=SNPlpop,
+           SNPr=SNPrpop,
+           posl=posSNPlpop,
+           posr=posSNPrpop) %>%
+    arrange(population, chr, posl)%>%
+    mutate(method="common_SNPs")
+  
+  res <- rbind(res, res2)
   
   
   # landraces data
@@ -336,7 +401,12 @@ if (repertoire=="all"){
 
   print(head(landraces))
   write.table(landraces, titre_stab2, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-  
+  head(res)
+  write.table(res, titre_PHASE_summary_outputs2, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
+  head(FST)
+  write.table(FST, titre_FST, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
+  head(correlations_mixed_models)
+  write.table(correlations_mixed_models, titre_correlations_mixed_models, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
   
   
   
@@ -349,8 +419,6 @@ if (repertoire=="all"){
 
 head(cor_4Mb)
 write.table(cor_4Mb, titre_cor_4Mb, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-head(correlations_mixed_models)
-write.table(correlations_mixed_models, titre_correlations_mixed_models, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 head(cliques)
 write.table(cliques, titre_cliques2, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 head(hr)
@@ -359,15 +427,12 @@ head(genetic_maps)
 write.table(genetic_maps, titre_genetic_maps, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 # column coef_proportionnality (no unit) = average ratio bewteen historical_rec_rate (converted from 4Ne*M/pb to 4*Ne cM/Mb , i.e. multiplied by a 1e-8 factor) divided by average Csre Bayesian meiotic rate in the genomic region (1AR1...7DR3)
 # column meiotic_rec_rate (cM/Mb) : for CsRe = Bayesian meiotic rec rate ; for WE, EE, WA and EA =  historical_rec_rate * 1e8 / coef_proportionnality
-head(res)
-write.table(res, titre_PHASE_summary_outputs2, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
+
 # Outputs from PHASE, median per interval
 head(map_4Mb)
 write.table(map_4Mb, titre_maps_4Mb, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 # Outputs from PHASE, median per interval
 head(overlap_HR)
 write.table(overlap_HR, titre_overlap_HR_published, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
-head(FST)
-write.table(FST, titre_FST, col.names = T, row.names = F, dec=".", sep="\t", quote=F)
 
 sessionInfo()
