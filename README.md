@@ -1,4 +1,4 @@
-# scripts
+# Scripts and computer code: Evolution of recombination landscapes in diverging populations of bread wheat
 
 Pipeline to estimate and compare LD-based recombination landscapes of 4 bread wheat landraces populations
 
